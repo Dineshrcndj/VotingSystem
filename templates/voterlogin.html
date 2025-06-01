@@ -1,0 +1,41 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title>Voter Login</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+  <body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-body">
+                          <h2 class="text-center mb-4">Voter Login</h2>
+                          <form  method="POST">
+                              <div class="mb-3">
+                                  <label for="voterid" class="form-label fw-bold">Voter ID</label>
+                                  <input type="text" class="form-control" id="voterid" name="voterid" required>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="aadhar" class="form-label fw-bold">Aadhar Number</label>
+                                  <input type="text" class="form-control" id="aadhar" name="aadhar"  title="Please enter valid 12 digit Aadhar number">
+                              </div>
+                              <button type="submit" class="btn btn-primary w-100">Login</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>
