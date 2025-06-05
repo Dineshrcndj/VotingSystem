@@ -121,9 +121,10 @@
                 <tbody>
                     {% for result in results %}
                     <tr>
+                        <td>{{results.index((result[0],result[1]))+1 }}</td>
                         <td>{{ result[0] }}</td>
                         <td>{{ result[1] }}</td>
-                        <td>{{ result[2] }}</td>
+                    
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -141,9 +142,9 @@
                 <tbody>
                     {% for voter in voted_voters %}
                     <tr>
-                        <td>{{ voted_voters.index((voter[0],voter[1],voter[2]))+1 }}</td>
+                        <td>{{ voted_voters.index((voter[0],voter[1]))+1 }}</td>
+                        <td>{{ voter[0] }}</td>
                         <td>{{ voter[1] }}</td>
-                        <td>{{ voter[2] }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
